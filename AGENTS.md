@@ -1,10 +1,13 @@
 ## Project
 Smart Campus room availability checker; web app (React + TypeScript).
 Fictional data only. No login, no database, no backend, no booking creation.
-No secrets in the repository. No external deployments or publishing.
+No secrets in the repository. Agents never deploy or publish; the human owner publishes the live demo by pushing to GitHub (CI workflow `.github/workflows/pages.yml`, Practice #12 requirement).
 
 ## Structure
 - src/booking.ts: checkAvailability (pure rule function, canonical)
+- src/contract/: Practice #12 shared contract (validate.ts, checkContract.ts, testCases.ts, runSharedTests.ts)
+- src/Root.tsx, src/components/ContractChecker.tsx: Practice #12 UI shell and checker
+- lowcode/: Appsmith JS object, build guide, export (low-code comparison)
 - src/App.tsx, src/components/ (RoomFilters, RoomPicker, TimeForm, DecisionPanel): UI
 - src/utils/time.ts: time helpers
 - src/utils/roomFilters.ts: room filtering predicates

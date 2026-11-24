@@ -1,0 +1,9 @@
+T1 | Available AVAILABLE Available: Allen Hall 101 is free 11:30–12:30.
+T2 | Unavailable OVERLAP Unavailable: 10:30–11:30 overlaps with existing booking "CS101 Lecture" (10:00–11:00).
+T3 | Unavailable BLOCKED Unavailable: Allen Hall 101 is blocked and cannot be booked.
+T4 | Check your input INVALID_DURATION Duration must be a whole number of minutes greater than 0.
+T5 | Check your input TOO_LONG Duration must be at most 120 minutes (you entered 121).
+T6 | Check your input PAST_TIME Start time must be in the future (after 09:00).
+T7 | Available AVAILABLE Available: Allen Hall 101 is free 11:00–12:00.
+RUNNER | 8 / 8 passed
+mobile scrollWidth 390

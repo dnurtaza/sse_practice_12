@@ -1,0 +1,17 @@
+# Pre-check of lowcode/Checker.js logic in Node.js (NOT a run inside Appsmith)
+$ node verify_lowcode.mjs lowcode/Checker.js
+T1 PASS | Available · AVAILABLE
+T2 PASS | Unavailable · OVERLAP
+T3 PASS | Unavailable · BLOCKED
+T4 PASS | Unavailable · INVALID_DURATION
+T5 PASS | Unavailable · TOO_LONG
+T6 PASS | Unavailable · PAST_TIME
+T7 PASS | Available · AVAILABLE
+T8 PASS | unchanged
+passed 8 / 8
+check() -> {"available":false,"reasonCode":"OVERLAP","message":"Unavailable: 10:30–11:30 overlaps with existing booking \"CS101 Lecture\" (10:00–11:00).","validationError":false}
+ 30 -> INVALID_START
+11:30 abc -> INVALID_DURATION
+11:30 30.5 -> INVALID_DURATION
+23:30 60 -> OUT_OF_DAY
+09:30 30 -> AVAILABLE

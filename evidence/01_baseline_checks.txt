@@ -1,0 +1,50 @@
+$ node --version
+v22.23.5
+$ npm --version
+10.9.9
+
+$ npm test
+> vite-react-typescript-starter@0.0.0 test
+> vitest run
+ RUN  v2.1.9 /home/claude/sc/smart-campus
+ ✓ tests/explainAvailability.test.ts (20 tests) 60ms
+ ✓ tests/booking.final.test.ts (23 tests) 6ms
+ ✓ tests/explain.cases.test.ts (11 tests) 57ms
+ ✓ tests/explain.regression.test.ts (8 tests) 87ms
+ ✓ tests/booking.first.test.ts (17 tests) 8ms
+ ✓ tests/room.picker.ui.test.tsx (6 tests) 20ms
+ ✓ tests/room.filtering.test.ts (10 tests) 5ms
+ ✓ tests/risk.regression.test.tsx (7 tests) 13ms
+ ✓ tests/booking.boundaries.test.ts (6 tests) 6ms
+ Test Files  9 passed (9)
+      Tests  108 passed (108)
+   Start at  17:43:29
+   Duration  2.48s (transform 205ms, setup 0ms, collect 577ms, tests 263ms, environment 2ms, prepare 500ms)
+exit=0
+
+$ npm run typecheck
+> vite-react-typescript-starter@0.0.0 typecheck
+> tsc --noEmit -p tsconfig.app.json
+exit=0
+
+$ npm run lint
+> vite-react-typescript-starter@0.0.0 lint
+> eslint .
+exit=0
+
+$ npm run build
+> vite-react-typescript-starter@0.0.0 build
+> vite build
+vite v5.4.8 building for production...
+transforming...
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 1580 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.71 kB │ gzip:  0.39 kB
+dist/assets/index-Bfjh9qUP.css   17.86 kB │ gzip:  4.04 kB
+dist/assets/index-BIzmRCvL.js   172.36 kB │ gzip: 54.02 kB
+✓ built in 2.40s
+exit=0

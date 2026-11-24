@@ -1,0 +1,23 @@
+## after removing unused @supabase/supabase-js
+$ git diff --stat -- package.json package-lock.json
+ package-lock.json | 128 +++---------------------------------------------------
+ package.json      |   1 -
+ 2 files changed, 7 insertions(+), 122 deletions(-)
+$ npm audit --omit=dev
+found 0 vulnerabilities
+
+$ npm test
+ Test Files  11 passed (11)
+      Tests  139 passed (139)
+exit=0
+
+$ npm run typecheck
+exit=0
+
+$ npm run lint
+exit=0
+
+$ npm run build
+✓ built in 2.33s
+exit=0
+{'info': 0, 'low': 2, 'moderate': 7, 'high': 13, 'critical': 2, 'total': 24}

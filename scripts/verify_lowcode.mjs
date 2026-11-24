@@ -1,0 +1,13 @@
+import fs from 'fs';
+const src = fs.readFileSync(process.argv[2], 'utf8').replace('export default', 'globalThis.Checker =');
+globalThis.store = {};
+globalThis.storeValue = (k, v) => { store[k] = v; return Promise.resolve(); };
+globalThis.resetWidget = () => {};
+eval(src);
+const C = globalThis.Checker;
+const rows = C.testRows.call(C);
+for (const r of rows) console.log(r.id, r.result, '|', r.observed);
+console.log('passed', rows.filter(r => r.result === 'PASS').length, '/', rows.length);
+globalThis.StartInput = { text: '10:30' }; globalThis.DurationInput = { text: '60' }; globalThis.BlockedSwitch = { isSwitchedOn: false };
+C.check.call(C); console.log('check() ->', JSON.stringify(store.result));
+for (const [s,d] of [['', '30'], ['11:30','abc'], ['11:30','30.5'], ['23:30','60'], ['09:30','30']]) console.log(s, d, '->', C.evaluate.call(C, s, d, false).reasonCode);

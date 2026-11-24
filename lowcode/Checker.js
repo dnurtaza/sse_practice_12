@@ -69,14 +69,14 @@ export default {
       const pass = r.available === c.avail && r.reasonCode === c.code;
       return {
         id: c.id,
-        case: c.title + ' (' + c.start + ', ' + c.duration + ' min' + (c.blocked ? ', blocked' : '') + ')',
+        scenario: c.title + ' (' + c.start + ', ' + c.duration + ' min' + (c.blocked ? ', blocked' : '') + ')',
         expected: (c.avail ? 'Available' : 'Unavailable') + ' · ' + c.code,
         observed: (r.available ? 'Available' : 'Unavailable') + ' · ' + r.reasonCode,
         result: pass ? 'PASS' : 'FAIL',
       };
     });
     const unchanged = JSON.stringify(this.bookings) === before;
-    rows.push({ id: 'T8', case: 'Booking data unchanged after T1–T7', expected: 'unchanged', observed: unchanged ? 'unchanged' : 'CHANGED', result: unchanged ? 'PASS' : 'FAIL' });
+    rows.push({ id: 'T8', scenario: 'Booking data unchanged after T1–T7', expected: 'unchanged', observed: unchanged ? 'unchanged' : 'CHANGED', result: unchanged ? 'PASS' : 'FAIL' });
     return rows;
   },
 
