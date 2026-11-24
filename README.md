@@ -6,7 +6,7 @@ Student: Daniyal Nurtaza (24B031075), Tuesday 16:00–19:00. AI tool: Claude Opu
 ## Links
 | What | Link |
 |---|---|
-| Live demo — code-based (GitHub Pages) | `https://<your-github-username>.github.io/<repository-name>/` (published by CI after push) |
+| Live demo — code-based (GitHub Pages) | `https://dnurtaza.github.io/sse_practice_12/` (published by CI after push) |
 | Live demo — low-code (Appsmith, public) | https://app.appsmith.com/app/smart-campus-checker-practice-12/page1-6b058982b238dbe867c49d06 |
 | Report | [docs/PRACTICE12_REPORT.md](docs/PRACTICE12_REPORT.md) (also `docs/Practice12_Report.docx`) |
 | Shared requirement / AC sheet | [docs/CONTRACT.md](docs/CONTRACT.md) |
